@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # airtm
+
 url = 'https://rates.airtm.com/'
 
 req = requests.get(url)
