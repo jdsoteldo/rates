@@ -12,6 +12,6 @@ def monitor():
     # get rid of white space and divides the string into a list
     prates = rates.text.split()
     # print only the first element, which is the amount
-    print("Monitor dolar Venezuela:", prates)
+    print("Monitor dolar Venezuela:", prates[0])
 
 monitor()
