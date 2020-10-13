@@ -9,7 +9,9 @@ def monitor():
     req = requests.get(monitorUrl)
     soup = BeautifulSoup(req.content, 'html.parser')
     rates = soup.find(id="Costo")
+    # get rid of white space and divides the string into a list
     prates = rates.text.split()
-    print("Monitor dolar Venezuela:", prates[0])
+    # print only the first element, which is the amount
+    print("Monitor dolar Venezuela:", prates)
 
 monitor()
