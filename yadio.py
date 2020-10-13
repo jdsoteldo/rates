@@ -1,11 +1,13 @@
 import requests
 import json
 
-url = 'https://api.yadio.io/rate/usd'
+# yadio
+
+yadioUrl = 'https://api.yadio.io/rate/usd'
 
 def yadio():
-    response = requests.get(url)
+    response = requests.get(yadioUrl)
     format = response.json()["rate"]
-    print(format)
+    print("Yadio:", format)
 
 yadio()

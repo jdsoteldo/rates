@@ -12,6 +12,6 @@ def bcv():
     for rate in rates:
         rate.find('strong')
 
-    print(rate.text)
+    print("Banco Central de Venezuela:", rate.text)
 
 bcv()

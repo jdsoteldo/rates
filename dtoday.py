@@ -1,11 +1,13 @@
 import requests
 import json
 
-url = 'https://s3.amazonaws.com/dolartoday/data.json'
+# Dolar today
+
+dtUrl = 'https://s3.amazonaws.com/dolartoday/data.json'
 
 def dolartoday():
-    response = requests.get(url)
+    response = requests.get(dtUrl)
     format = response.json()["USD"]["transferencia"]
-    print(format)
+    print("DolarToday:", format)
 
 dolartoday()
