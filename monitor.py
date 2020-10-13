@@ -9,6 +9,7 @@ def monitor():
     req = requests.get(monitorUrl)
     soup = BeautifulSoup(req.content, 'html.parser')
     rates = soup.find(id="Costo")
-    print("Monitor dolar Venezuela:", rates.text)
+    prates = rates.text.split()
+    print("Monitor dolar Venezuela:", prates[0])
 
 monitor()
