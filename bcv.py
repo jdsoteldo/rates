@@ -5,10 +5,13 @@ from bs4 import BeautifulSoup
 
 url = 'http://www.bcv.org.ve/'
 
-req = requests.get(url)
-soup = BeautifulSoup(req.content, 'html.parser')
-rates = soup.findAll('div', class_="col-sm-6")
-for rate in rates:
-    rate.find('strong')
+def bcv():
+    req = requests.get(url)
+    soup = BeautifulSoup(req.content, 'html.parser')
+    rates = soup.findAll('div', class_="col-sm-6")
+    for rate in rates:
+        rate.find('strong')
 
-print(rate.text)
+    print(rate.text)
+
+bcv()
